@@ -10,4 +10,6 @@
     <string name="prevDescr">icon to skip to previous track</string>
     <string name="nextDescr">icon to skip to next track</string>
     <string name="playDescr">icon to play track</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="song_artist_names">%s - %s</string>
 </resources>

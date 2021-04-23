@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongAdapter"
+    android:padding="12dp"
+    android:foreground="?selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/ivSongImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Song name"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/ivSongImage"
+        app:layout_constraintTop_toTopOf="@id/ivSongImage"
+        app:layout_constraintBottom_toTopOf="@id/tvArtistName"
+        android:layout_marginLeft="16dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        />
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Artist name"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/ivSongImage"
+        app:layout_constraintTop_toBottomOf="@id/tvSongName"
+        app:layout_constraintBottom_toBottomOf="@id/ivSongImage"
+        android:layout_marginLeft="16dp"
+        android:textSize="18sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

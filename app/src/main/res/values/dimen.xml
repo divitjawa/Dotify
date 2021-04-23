@@ -4,5 +4,8 @@
     <dimen name="medium_text">20sp</dimen>
     <dimen name="large_text">36sp</dimen>
     <dimen name="medium_spacing">10dp</dimen>
+    <dimen name="mini_player_height">70dp</dimen>
+    <dimen name="mini_player_content_height">50dp</dimen>
+    <dimen name="mini_player_max_text">250dp</dimen>
 
 </resources>
