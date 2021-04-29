@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/global_padding"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/llChangeUserContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="SettingsActivity"
+            android:text="@string/settings"
+            android:background="@color/green"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+    <!-- Song Cover image-->
+    <ImageButton
+        android:id="@+id/ibAlbumCover"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/coverImgDescr"
+        android:foreground="?selectableItemBackground"
+        android:longClickable="true"
+        app:layout_constraintHorizontal_weight="1"
+        android:paddingTop="@dimen/medium_spacing"
+        android:scaleType="fitXY"
+        android:src="@drawable/song_cover"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/verticalGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline"
+        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <!-- Song Information-->
+    <TextView
+        android:id="@+id/tvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_song_name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/green"
+        android:textSize="@dimen/large_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+        app:layout_constraintBottom_toTopOf="@id/tvArtistInfo"
+        />
+
+    <TextView
+        android:id="@+id/tvArtistInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/default_artist"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tvSongTitle"
+        app:layout_constraintBottom_toTopOf="@id/tvNumPlays"
+        />
+
+    <TextView
+        android:id="@+id/tvNumPlays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistInfo"
+        app:layout_constraintBottom_toTopOf="@id/txtBtnGuideline"
+        tools:text="# plays" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/txtBtnGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <!-- Layout for play, previous and next buttons-->
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/prevDescr"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/verticalGuideline"
+        app:layout_constraintRight_toLeftOf="@+id/btnPlay"
+        app:layout_constraintTop_toBottomOf="@id/txtBtnGuideline" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/playDescr"
+        android:foreground="?selectableItemBackground"
+        android:foregroundTint="@color/green"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnPrev"
+        app:layout_constraintRight_toLeftOf="@+id/btnNext"
+        app:layout_constraintTop_toBottomOf="@id/txtBtnGuideline"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="@string/nextDescr"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/ic_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btnPlay"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBtnGuideline"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
