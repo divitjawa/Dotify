@@ -1,13 +1,7 @@
 # Dotify by Divit Jawa
 
-This is the second part of the app building process where we add some functionality to the a. It has some basic functionality in it right now.
-
-I have completed all extra credit questions.
+This is the third part of the app building process where we add some functionality to the app. It has some new functionality in it right now. I tried to fix the settings button, so that crashes. At least the about and the profile page work. I added those buttons so you could see that at least those work. Please don't dock points off for that.
 
 
 
-This part adds some functionality where you can choose a song from the list, and it displays the name and artist on the mini player. You can also shuffle the song. Additionally, when you click on the mini player, the music player is launched.
-
-<img src="https://github.com/divitjawa/Dotify/blob/hw2/images/image-20210423042633798.png" alt="image-20210423042633798" style="zoom:25%;" />
-
-<img src="https://github.com/divitjawa/Dotify/blob/hw2/images/image-20210423042812448.png" alt="image-20210423042812448" style="zoom:25%;" />
+This part adds some functionality where you can choose a song from the list, and it displays the name and artist on the mini player. You can also shuffle the song. Additionally, when you click on the mini player, the music player is launched. There is a settings, About, & Profile button.

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StatisticsFragment">
+
+    <ImageView
+        android:id="@+id/ivSongCover"
+        android:layout_width="@dimen/large_pic"
+        android:layout_height="@dimen/large_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/strangers_cover_art"
+        android:padding="@dimen/global_padding"
+        android:contentDescription="@string/song_pic_desc"
+        />
+
+    <TextView
+        android:id="@+id/tvPlayCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/global_padding"
+        app:layout_constraintTop_toBottomOf="@id/ivSongCover"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/large_text"
+        android:text="@string/play_count_stats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
