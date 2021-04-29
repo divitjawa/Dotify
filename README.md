@@ -8,8 +8,8 @@ This part adds some functionality where you can choose a song from the list, and
 
 
 
-![image-20210429013612919](C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210429013612919.png)
+![image-20210429013612919](https://github.com/divitjawa/Dotify/blob/hw3/images/image-20210429013612919.png)
 
 
 
-![image-20210429013639263](C:\Users\divit\AppData\Roaming\Typora\typora-user-images\image-20210429013639263.png)
+![image-20210429013639263](https://github.com/divitjawa/Dotify/blob/hw3/images/image-20210429013639263.png)
